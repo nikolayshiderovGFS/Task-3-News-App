@@ -16,7 +16,6 @@ class ArticlesViewController: UIViewController {
     private var lastSelectedRowIndex: Int?
     
     var category: String = ""
-    var numberOfArticles: Int = 0
     var articles = [Article]()
     
     override func viewDidLoad() {
@@ -46,7 +45,6 @@ class ArticlesViewController: UIViewController {
                 let decoder = JSONDecoder()
                 do {
                     let articlesFeed = try decoder.decode(ArticlesFeed.self, from: data!)
-                    self.numberOfArticles = articlesFeed.totalResults
                     self.articles = articlesFeed.articles!
                     DispatchQueue.main.async {
                         completed()

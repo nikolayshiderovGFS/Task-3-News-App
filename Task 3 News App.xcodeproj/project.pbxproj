@@ -18,6 +18,7 @@
 		45A27BA2273179B300042719 /* ArticlesFeed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45A27BA1273179B300042719 /* ArticlesFeed.swift */; };
 		45A27BA427317A1500042719 /* Article.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45A27BA327317A1500042719 /* Article.swift */; };
 		45A27BA627327B1900042719 /* ArticleDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45A27BA527327B1900042719 /* ArticleDetailsViewController.swift */; };
+		45A27BA927329A5300042719 /* CommonUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45A27BA827329A5300042719 /* CommonUtils.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		45A27BA1273179B300042719 /* ArticlesFeed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticlesFeed.swift; sourceTree = "<group>"; };
 		45A27BA327317A1500042719 /* Article.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Article.swift; sourceTree = "<group>"; };
 		45A27BA527327B1900042719 /* ArticleDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleDetailsViewController.swift; sourceTree = "<group>"; };
+		45A27BA827329A5300042719 /* CommonUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonUtils.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +68,7 @@
 		45A27B8427312CE500042719 /* Task 3 News App */ = {
 			isa = PBXGroup;
 			children = (
+				45A27BA7273299CC00042719 /* Utils */,
 				45A27BA02731798F00042719 /* Decodable */,
 				45A27B9C27316F8900042719 /* Cells */,
 				45A27B9B27313B4500042719 /* ViewControllers */,
@@ -104,6 +107,14 @@
 				45A27BA327317A1500042719 /* Article.swift */,
 			);
 			path = Decodable;
+			sourceTree = "<group>";
+		};
+		45A27BA7273299CC00042719 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				45A27BA827329A5300042719 /* CommonUtils.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -184,6 +195,7 @@
 				45A27B8627312CE500042719 /* AppDelegate.swift in Sources */,
 				45A27B9E27316FAC00042719 /* ArticleCell.swift in Sources */,
 				45A27BA627327B1900042719 /* ArticleDetailsViewController.swift in Sources */,
+				45A27BA927329A5300042719 /* CommonUtils.swift in Sources */,
 				45A27B8827312CE500042719 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

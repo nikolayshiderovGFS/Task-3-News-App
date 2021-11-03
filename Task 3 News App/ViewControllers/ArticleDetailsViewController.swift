@@ -20,17 +20,32 @@ class ArticleDetailsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        authorLabel.text = article?.author
-        titleLabel.text = article?.title
-        descriptionLabel.text = article?.description
-        publishedAtLabel.text = article?.publishedAt
+        if (article?.author) != nil {
+            authorLabel.text = article?.author
+        } else { authorLabel.text = "Anonymous Author" }
+        if (article?.title) != nil {
+            titleLabel.text = article?.title
+        } else {titleLabel.text = "Untitled Article"}
+        if (article?.description) != nil {
+            descriptionLabel.text = article?.description
+        } else { article?.description = "No Article Description Provided"}
+        if (article?.publishedAt) != nil {
+        publishedAtLabel.text = CommonUtils.convertUTCToLocal(utcDateString: (article?.publishedAt)!)
+        } else {article?.publishedAt = "No Publishing Date Provided"}
+        if (article?.content) != nil {
         contentLabel.text = article?.content
+        } else {contentLabel.text = "No Article Content Provided"}
         if let imageUrl = article?.urlToImage {
             articleImage.downloadFrom(link: imageUrl)
         }
     }
     
     @IBAction func openInWebPressed(_ sender: UIButton) {
+        if (article?.url) != nil {
+            if let url = URL(string: (article?.url)!) {
+                UIApplication.shared.open(url)
+            }
+        } else { return }
     }
     
 }
