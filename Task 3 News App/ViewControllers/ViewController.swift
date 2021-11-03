@@ -18,8 +18,6 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        let numberOfReadArticles = UserDefaults.standard.integer(forKey: "numberOfReadArticles")
-        readArticlesLabel.text = String(numberOfReadArticles)
     }
     
     override func viewWillAppear(_ animated: Bool) {
