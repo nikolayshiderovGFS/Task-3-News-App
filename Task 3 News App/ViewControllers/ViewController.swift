@@ -8,14 +8,23 @@
 import UIKit
 
 class ViewController: UIViewController {
-
-    @IBOutlet weak var tableView: UITableView!
     
-    let newsCategories: [String] = ["business", "entertainment", "general", "health", "science", "sports", "technology"]
+    @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var readArticlesLabel: UILabel!
+    
     private var lastSelectedRowIndex: Int?
+    let newsCategories: [String] = ["business", "entertainment", "general", "health", "science", "sports", "technology"]
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        let numberOfReadArticles = UserDefaults.standard.integer(forKey: "numberOfReadArticles")
+        readArticlesLabel.text = String(numberOfReadArticles)
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        let numberOfReadArticles = UserDefaults.standard.integer(forKey: "numberOfReadArticles")
+        readArticlesLabel.text = String(numberOfReadArticles)
     }
 }
 

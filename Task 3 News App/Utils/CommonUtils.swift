@@ -19,4 +19,3 @@ class CommonUtils {
         return localDateString
     }
 }
-

@@ -73,6 +73,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Categories" id="gC3-ea-pPT"/>
                     <connections>
+                        <outlet property="readArticlesLabel" destination="COn-fz-r0b" id="Qbv-K4-CMa"/>
                         <outlet property="tableView" destination="gGm-bH-FgQ" id="0l5-Bo-PuQ"/>
                         <segue destination="5Vt-cK-qFp" kind="show" identifier="toArticlesVC" id="VZq-h1-Tsk"/>
                     </connections>

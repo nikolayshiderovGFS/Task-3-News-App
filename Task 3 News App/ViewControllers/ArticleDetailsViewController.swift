@@ -45,7 +45,13 @@ class ArticleDetailsViewController: UIViewController {
             if let url = URL(string: (article?.url)!) {
                 UIApplication.shared.open(url)
             }
-        } else { return }
+    
+            let numberOfReadArticles = UserDefaults.standard.integer(forKey: "numberOfReadArticles")
+            UserDefaults.standard.set(numberOfReadArticles + 1, forKey: "numberOfReadArticles")
+        } else {
+            return
+            
+        }
     }
     
 }
